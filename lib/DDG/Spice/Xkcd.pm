@@ -18,18 +18,26 @@ status "enabled";
 
 triggers startend => "xkcd";
 
-spice to => 'http://dynamic.xkcd.com/api-0/jsonp/comic/$1';
+spice to => 'http://xkcd.com/$1/info.0.json';
 spice wrap_jsonp_callback => 1;
 
 spice is_cached => 0;
 
 handle remainder => sub {
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f92a25b1827a054146a3e12fd3d27689abb84d6b
 	if ($_ =~ /^(\d+|r(?:andom)?)$/) {
 		return int rand 1122 if $1 =~ /r/;
 		return $1;
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f92a25b1827a054146a3e12fd3d27689abb84d6b
 	return '' if $_ eq '';
 	return;
 };

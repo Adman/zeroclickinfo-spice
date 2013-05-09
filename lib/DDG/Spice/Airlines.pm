@@ -13,9 +13,14 @@ source "FlightAware";
 code_url "https://github.com/duckduckgo/zeroclickinfo-spice/blob/master/lib/DDG/Spice/Airlines.pm";
 topics "economy_and_finance", "travel", "everyday";
 category "time_sensitive";
+<<<<<<< HEAD
 attribution web => [ 'https://www.duckduckgo.com', 'DuckDuckGo' ],
             github => [ 'https://github.com/duckduckgo', 'duckduckgo'],
             twitter => ['http://twitter.com/duckduckgo', 'duckduckgo'];
+=======
+attribution github => ['https://github.com/nilnilnil','Caine Tighe'],
+            web => 'http://opensesame.st/';
+>>>>>>> f92a25b1827a054146a3e12fd3d27689abb84d6b
 
 spice to => 'https://duckduckgo.com/flights.js?airline=$1&flightno=$2&callback={{callback}}';
 spice from => '(.*?)/(.*)';
